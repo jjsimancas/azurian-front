@@ -1,0 +1,20 @@
+<div class="container">
+  <table datatable class="row-border hover">
+    <thead>
+    <tr>
+      <th>Run</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client.run + '-' + client.digitVer}}</td>
+      <td>{{client.name + client.lastname}}</td>
+      <td>{{client.phone}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
