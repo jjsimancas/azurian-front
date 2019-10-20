@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {Client} from '../../models/Client';
+import {ClientService} from '../../services/client.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   logo = 'assets/azurian.jpg';
+  @Output() public clients: Client[];
 
-  constructor() { }
+
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
   }
 
+  loadClients() {
+    return this.clientService.getClients().subscribe((data: Client[]) => {
+      this.clients = data;
+      console.log(this.clients);
+    });
+  }
 }

@@ -1,3 +1,4 @@
+<ng-container *ngIf="clients">
 <div class="container">
   <table datatable class="row-border hover">
     <thead>
@@ -9,12 +10,13 @@
     </thead>
     <tbody>
     <tr *ngFor="let client of clients">
-      <td>{{client.run + '-' + client.digitVer}}</td>
-      <td>{{client.name + client.lastname}}</td>
+      <td>{{client.run + '-' + client.digitVerifier}}</td>
+      <td>{{client.name +' '+ client.lastName}}</td>
       <td>{{client.phone}}</td>
     </tr>
     </tbody>
   </table>
 </div>
+</ng-container>
 
 

@@ -8,10 +8,17 @@ import {Client} from '../../models/Client';
 })
 export class DatatableComponent implements OnInit {
   @Input() clients: Client[];
+  dtOptions: DataTables.Settings = {};
 
   constructor() {}
 
   ngOnInit() {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      responsive: true
+
+    };
   }
 
 }
