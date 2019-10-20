@@ -7,18 +7,22 @@ import { DatatableComponent } from './views/datatable/datatable.component';
 import {DataTablesModule} from 'angular-datatables';
 import { HeaderComponent } from './views/header/header.component';
 import { HomeComponent } from './views/home/home.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MediumComponent } from './views/medium/medium.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatatableComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    MediumComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataTablesModule
+    DataTablesModule,
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

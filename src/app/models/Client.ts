@@ -1,7 +1,7 @@
 export class Client {
   run: number;
-  digitVer: number;
+  digitVerifier: number;
   name: string;
-  lastname: string;
+  lastName: string;
   phone: string;
 }

@@ -6,14 +6,12 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['table']">Tabla de Registros</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Busqueda por Run</a>
+        <a class="nav-link" [routerLink]="['table']" (click)="loadClients()">Tabla de Registros</a>
       </li>
     </ul>
   </div>
 </nav>
+<app-medium [clients]="clients"></app-medium>
 
 
 
