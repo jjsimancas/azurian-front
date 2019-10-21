@@ -21,7 +21,7 @@ export class ClientService {
     if (error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
     } else {
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      errorMessage = `Codigo de error: ${error.status}\nMensaje: ${error.message}`;
     }
     window.alert(errorMessage);
     return throwError(errorMessage);

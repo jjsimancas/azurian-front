@@ -14,9 +14,11 @@ export class DatatableComponent implements OnInit {
 
   ngOnInit() {
     this.dtOptions = {
+      lengthChange: false,
       pagingType: 'full_numbers',
-      pageLength: 5,
-      responsive: true
+      searching: false,
+      responsive: true,
+      paging: false
 
     };
   }
